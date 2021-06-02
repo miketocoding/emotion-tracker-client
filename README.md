@@ -17,5 +17,10 @@ My project idea is to build an emotion tracker app. Growing up, I feel like my g
 - As a user, I want to Delete posts I've made
 - As a user, I want to see annonymous posts others have made
 
-## Wireframes
+## Images
+
+### Wireframe:
 ![Emotion Tracker Wireframe](./public/project2wireframe.jpeg)
+
+### ERD:
+![Emotion Tracker ERD](./public/emotiontrackererd.png)
