@@ -18,4 +18,4 @@ My project idea is to build an emotion tracker app. Growing up, I feel like my g
 - As a user, I want to see annonymous posts others have made
 
 ## Wireframes
-![Emotion Tracker Wireframe](./project2wireframe.jpeg)
+![Emotion Tracker Wireframe](./public/project2wireframe.jpeg)
