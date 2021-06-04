@@ -21,6 +21,7 @@ const signIn = function (data) {
 }
 
 const signOut = function () {
+  console.log('sign out, no data')
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/sign-out',
@@ -35,11 +36,11 @@ const changePassword = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
-    headers: {
-      Authorization: `Bearer  + ${store.user.token}`
-    },
-    data
     // data: data
+    data,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
   })
 }
 

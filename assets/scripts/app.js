@@ -10,6 +10,8 @@ $(() => {
   // your JS code goes here
   $('#sign-up').on('submit', userEvents.onSignUp)
   $('#sign-in').on('submit', userEvents.onSignIn)
-  $('#sign-out').on('click', userEvents.onSignIn)
+  $('#sign-out').on('click', userEvents.onSignOut)
   $('#change-password').on('submit', userEvents.onChangePassword)
+  // Hide the "after sign in" elements
+  $('#after-sign-in').hide()
 })
