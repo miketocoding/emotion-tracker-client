@@ -15,7 +15,7 @@ My project idea is to build an emotion tracker app. Growing up, my generation wa
 - As a user, I want to Read multiple/single posts
 - As a user, I want to Update a post I make
 - As a user, I want to Delete posts I've made
-- As a user, I want to see annonymous posts others have made
+- As a user, I want to see anonymous posts others have made
 
 ## Images
 
