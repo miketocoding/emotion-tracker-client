@@ -40,6 +40,7 @@ const signOutFailure = function () {
 const changePasswordSuccess = function () {
   $('#messaging').text('Changed password successfully')
   console.log('changePasswordSuccess ran and nothing to return')
+  $('form').trigger('reset')
 }
 
 const changePasswordFailure = function (error) {
