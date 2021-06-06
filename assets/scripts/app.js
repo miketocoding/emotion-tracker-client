@@ -1,5 +1,6 @@
 'use strict'
 const userEvents = require('./user/events.js')
+const emotionEvents = require('./emotion/events.js')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 
@@ -14,4 +15,5 @@ $(() => {
   $('#change-password').on('submit', userEvents.onChangePassword)
   // Hide the "after sign in" elements
   $('#after-sign-in').hide()
+  $('#create-emotion').on('submit', emotionEvents.onCreateEmotion)
 })

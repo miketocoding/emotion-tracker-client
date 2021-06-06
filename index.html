@@ -44,6 +44,42 @@
           <input name="passwords[new]" required type="password" placeholder="New password"/>
           <button class="btn btn-outline-info" type="submit">Submit</button>
         </form>
+
+        <h3>Create Emotion</h3>
+        <h5>Please select an emotion</h5>
+        <form id="create-emotion">
+          <!-- <input name="emotion[happy]" type="radio" id="happy" value="happy">
+          <label for="happy">Happy</label>
+          <input name="emotion[sad]" type="radio" id="sad" value="sad">
+          <label for="sad">Sad</label>
+          <input name="emotion[scared]" type="radio" id="scared" value="scared">
+          <label for="scared">Scared</label>
+          <input name="emotion[angry]" type="radio" id="angry" value="angry">
+          <label for="angry">Angry</label>
+          <input name="emotion[surprised]" type="radio" id="surprised" value="surprised">
+          <label for="surprised">Surprised</label>
+          <input name="emotion[disgusted]" type="radio" id="disgusted" value="disgusted">
+          <label for="disgusted">Disgusted</label> -->
+          <input id= "emotion" name="emotion[emotionName]" required type="text" placeholder="Happy, Sad, Angry, Scared, Surprised, Disgusted" size="50">
+          <br>
+          <label for="description">Please describe what lead to this emotion:</label><br>
+          <textarea id="description" name="emotion[description]" rows="4" cols="50"></textarea><br>
+          <button class="btn btn-outline-info" type="submit">Submit</button>
+        </form>
+
+        <h3>Show all posts</h3>
+        <button id="index-emotion" class="btn btn-outline-info">Show All Posts</button>
+
+        <h3>Delete a post</h3>
+        <form>
+          <input name="delete-post" type="text" required placeholder="ID of post to be deleted">
+          <button class="btn btn-outline-info" type="submit">Delete this post</button>
+        </form>
+
+        <h3>Update a post</h3>
+        <p>need to fill this in</p>
+          <!-- Need to work on this. How to have an update without having the same ID -->
+
       </section>
 
 
