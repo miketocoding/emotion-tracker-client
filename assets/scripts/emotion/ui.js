@@ -5,17 +5,17 @@ const store = require('./../store')
 const createEmotionSuccess = function (res) {
   console.log(`this is the response data, ${JSON.stringify(res)}`)
   store.emotion = res.emotion
-  $('#messaging').text('Emotion successfully created')
+  $('#messaging').text('Thank you for sharing your feelings')
   $('#create-emotion').trigger('reset')
 }
 
 const createEmotionFailure = function () {
   console.log('failed to create emotion')
-  $('#messaging').text('Failed to create emotion')
+  $('#messaging').text('Something went wrong, can you try again?')
 }
 
 const indexEmotionsSuccess = function (res) {
-  // $('#messaging').text('Emotion index success!')
+  $('#messaging').text('Emotion index success!')
   // $('#emotions-display-all').html(
   //   res.emotions.map(emotion => `<div>
   //     <h3>${emotion.emotionName}</h3>
@@ -42,6 +42,21 @@ const indexEmotionsFailure = function () {
   $('#messaging').text('Emotions index failed')
 }
 
+const showEmotionSuccess = function (res) {
+  $('#show-emotion').trigger('reset')
+  $('#messaging').text('Show emotion success')
+  $('#emotions-display-all').html(
+    res.emotions.map(emotion => `<div>
+      <h3>${emotion.emotionName}</h3>
+      <p>Directed By: ${emotion.description}</p>
+    </div>`)
+  )
+}
+
+const showEmotionFailure = function () {
+  $('#messaging').text('Show emotion failure')
+}
+
 const deleteEmotionSuccess = function () {
   $('#delete-emotion').trigger('reset')
   $('#messaging').text('Emotion deleted')
@@ -49,6 +64,7 @@ const deleteEmotionSuccess = function () {
 
 const deleteEmotionFailure = function () {
   $('#messaging').text('Emotion delete failure')
+  $('#delete-emotion').trigger('reset')
 }
 
 const updateEmotionSuccess = function (res) {
@@ -67,6 +83,8 @@ module.exports = {
   createEmotionFailure,
   indexEmotionsSuccess,
   indexEmotionsFailure,
+  showEmotionSuccess,
+  showEmotionFailure,
   deleteEmotionSuccess,
   deleteEmotionFailure,
   updateEmotionSuccess,
