@@ -20,4 +20,5 @@ $(() => {
   $('#show-emotion').on('submit', emotionEvents.onShowEmotion)
   $('#delete-emotion').on('submit', emotionEvents.onDeleteEmotion)
   $('#update-emotion').on('submit', emotionEvents.onUpdateEmotion)
+  $('#emotions-list').on('click', '.dynamic-destroy-emotion', emotionEvents.onDynamicDestroyEmotion)
 })

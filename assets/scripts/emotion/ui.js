@@ -16,7 +16,7 @@ const createEmotionFailure = function () {
 
 const indexEmotionsSuccess = function (res) {
   $('#messaging').text('Emotion index success!')
-  // $('#emotions-display-all').html(
+  // $('#emotions-list').html(
   //   res.emotions.map(emotion => `<div>
   //     <h3>${emotion.emotionName}</h3>
   //     <p>Directed By: ${emotion.description}</p>
@@ -31,10 +31,11 @@ const indexEmotionsSuccess = function (res) {
       <h3>${emotion.emotionName}</h3>
       <p>Description: ${emotion.description}</p>
       <p>ID: ${emotion._id}
+      <button class="dynamic-destroy-emotion" data-id=${emotion._id}>Delete Emotion</button>
     </div>
   `
   })
-  $('#emotions-display-all').html(emotionHtml)
+  $('#emotions-list').html(emotionHtml)
 }
 
 const indexEmotionsFailure = function () {
@@ -45,7 +46,7 @@ const indexEmotionsFailure = function () {
 const showEmotionSuccess = function (res) {
   $('#show-emotion').trigger('reset')
   $('#messaging').text('Show emotion success')
-  $('#emotions-display-all').html(
+  $('#emotions-list').html(
     res.emotions.map(emotion => `<div>
       <h3>${emotion.emotionName}</h3>
       <p>Directed By: ${emotion.description}</p>
@@ -63,7 +64,7 @@ const deleteEmotionSuccess = function () {
 }
 
 const deleteEmotionFailure = function () {
-  $('#messaging').text('Emotion delete failure')
+  $('#messaging').text('You can only delete a post you created')
   $('#delete-emotion').trigger('reset')
 }
 

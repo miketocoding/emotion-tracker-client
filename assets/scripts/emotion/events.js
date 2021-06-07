@@ -50,10 +50,23 @@ const onUpdateEmotion = function (event) {
     .catch(ui.updateEmotionFailure)
 }
 
+const onDynamicDestroyEmotion = function (event) {
+  event.preventDefault()
+  console.log('in onDynamicDestroyEmotion')
+  const clickedButton = event.target
+  const emotionId = $(clickedButton).data('id')
+  console.log(emotionId)
+  api.deleteEmotion(emotionId)
+    .then(ui.deleteEmotionSuccess)
+    .then(() => onIndexEmotions(event))
+    .catch(ui.deleteEmotionFailure)
+}
+
 module.exports = {
   onCreateEmotion,
   onIndexEmotions,
   onShowEmotion,
   onDeleteEmotion,
-  onUpdateEmotion
+  onUpdateEmotion,
+  onDynamicDestroyEmotion
 }
