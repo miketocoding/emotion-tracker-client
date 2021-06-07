@@ -12,13 +12,31 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div class="container">
 
-      <h1>Emotion Tracker</h1>
+
+
+      <!-- <h1>Emotion Tracker</h1>
       <h3>It's healthy to feel</h3>
-      <p id="messaging"></p>
+      <p id="messaging"></p> -->
 
       <section id="before-sign-in">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+          <a class="navbar-brand" href="#">Emotion Tracker</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          </div>
+        </nav>
+
+
+        <div class="container">
+        <h1>Emotion Tracker</h1>
+        <h3>It's healthy to feel</h3>
+        <p id="messaging"></p>
+
         <section>
           <h5>Sign Up</h5>
           <form id="sign-up">
@@ -36,42 +54,28 @@
             <button type="submit" class="btn btn-info">Submit</button>
           </form>
         </section>
+      </div>
       </section>
 
       <section id="after-sign-in" class="hide">
-        <button id="sign-out" class="btn btn-outline-info">Sign Out</button>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">
-          Change Password
-        </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <a class="navbar-brand" href="#">Emotion Tracker</a>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <form id="change-password">
-              <div class="modal-body">
-                <p id="password-change-message"></p>
-                  <input name="passwords[old]" required type="password" placeholder="Old password"/>
-                  <input name="passwords[new]" required type="password" placeholder="New password"/>
-                  <!-- <button class="btn btn-outline-info" type="submit">Submit</button> -->
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-outline-info">Save changes</button>
-              </div>
-            </form>
-            </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <button id="sign-out" class="btn btn-outline-info">Sign Out</button>
           </div>
-        </div>
-        <!-- Modal End-->
+        </nav>
+        <div class="container">
+
+        <h1>Emotion Tracker</h1>
+        <h3>It's healthy to feel</h3>
+        <p class="after-sign-in-messaging"></p>
+
 
         <!-- <h3>Change Password</h3>
         <form id="change-password">
@@ -114,11 +118,29 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
                 <button id="index-emotion" class="btn btn-outline-info">Show All Posts</button>
-                <button id="clear-index-emotion" class="btn btn-outline-info">Clear Posts</button>
+                <button class="btn btn-outline-info clear-index-emotion">Clear Posts</button>
                 <div id="emotions-list"></div>
               </div>
             </div>
           </div>
+
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Show My Emotion Posts
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+              <div class="card-body">
+                <button id="index-my-emotion" class="btn btn-outline-info">Show All My Posts</button>
+                <button class="btn btn-outline-info clear-index-emotion">Clear Posts</button>
+                <div id="my-emotions-list"></div>
+              </div>
+            </div>
+          </div>
+
 
           <div class="card">
             <div class="card-header" id="headingThree">
@@ -162,6 +184,38 @@
             </div>
           </div>
         </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+          Change Password
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form id="change-password">
+              <div class="modal-body">
+                <p id="password-change-message"></p>
+                  <input name="passwords[old]" required type="password" placeholder="Old password"/>
+                  <input name="passwords[new]" required type="password" placeholder="New password"/>
+                  <!-- <button class="btn btn-outline-info" type="submit">Submit</button> -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-outline-info">Save changes</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!-- Modal End-->
 
         <!-- <h3>Create Emotion</h3>
         <h5>Please select an emotion</h5>
@@ -211,8 +265,48 @@
           <textarea id="descriptionUpdate" name="emotion[description]" rows="4" cols="50"></textarea><br>
           <button class="btn btn-outline-info" type="submit">Submit</button>
         </form> -->
+
+        <!-- Button trigger modal -->
+        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateEmotionModal">
+          Update Emotion
+        </button>
+ -->
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="updateEmotionModal" tabindex="-1" role="dialog" aria-labelledby="updateEmotionModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="updateEmotionModalLabel">Update Emotion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p id="update-emotion-message"></p>
+
+                <form class="dynamic-update-emotion" data-id=${emotion._id}>
+                  <label for="update-emotion-emotionName">Emotion:</label>
+                  <input class='dynamic-emotion-emotionName' type='text' name='emotion[emotionName]' placeholder="Update Emotion">
+                  <label for="update-emotion-description">Description:</label>
+                  <input clas='update-emotion-description' type='text' name='emotion[description]' placeholder="Update Description">
+                  <button class="dynamic-update-emotion">Update Emotion</button>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+ -->
+</div>
+
       </section>
 
-    </div>
+
     </body>
 </html>

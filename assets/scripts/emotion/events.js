@@ -22,7 +22,7 @@ const onIndexEmotions = function (event) {
 
 const onClearIndexEmotions = function () {
   $('#emotions-list').text('')
-    .then($('#messaging').text('Clear Posts Successful!'))
+    .then($('.after-sign-in-messaging').text('Clear Posts Successful!'))
 }
 
 const onShowEmotion = function (event) {
