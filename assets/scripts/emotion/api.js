@@ -15,6 +15,43 @@ const createEmotion = function (data) {
   })
 }
 
+const indexEmotions = function (data) {
+  console.log('trying to index emotions...')
+  return $.ajax({
+    url: config.apiUrl + '/emotions',
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
+const deleteEmotion = function (emotionId) {
+  console.log('trying to delete emotion...')
+  return $.ajax({
+    url: config.apiUrl + '/emotions/' + emotionId,
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
+const updateEmotion = function (emotionId, data) {
+  console.log('trying to update emotion...')
+  return $.ajax({
+    url: config.apiUrl + '/emotions/' + emotionId,
+    method: 'PATCH',
+    data,
+    headers: {
+      authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
-  createEmotion
+  createEmotion,
+  indexEmotions,
+  deleteEmotion,
+  updateEmotion
 }

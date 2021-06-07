@@ -16,4 +16,7 @@ $(() => {
   // Hide the "after sign in" elements
   $('#after-sign-in').hide()
   $('#create-emotion').on('submit', emotionEvents.onCreateEmotion)
+  $('#index-emotion').on('click', emotionEvents.onIndexEmotions)
+  $('#delete-emotion').on('submit', emotionEvents.onDeleteEmotion)
+  $('#update-emotion').on('submit', emotionEvents.onUpdateEmotion)
 })

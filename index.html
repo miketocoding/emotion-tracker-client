@@ -70,16 +70,28 @@
         <h3>Show all posts</h3>
         <button id="index-emotion" class="btn btn-outline-info">Show All Posts</button>
 
+        <h3>Show one post</h3>
+        <form id="show-emotion">
+          <input name="emotion[id]" type="text" placeholder="Emotion ID" required />
+          <button type="submit">Show One Emotion Post</button>
+        </form>
+        <div id="emotions-display-all"></div>
+
         <h3>Delete a post</h3>
-        <form>
-          <input name="delete-post" type="text" required placeholder="ID of post to be deleted">
+        <form id="delete-emotion">
+          <input name="id" type="text" required placeholder="ID of post to be deleted">
           <button class="btn btn-outline-info" type="submit">Delete this post</button>
         </form>
 
         <h3>Update a post</h3>
-        <p>need to fill this in</p>
-          <!-- Need to work on this. How to have an update without having the same ID -->
-
+        <form id="update-emotion">
+          <input name="id" type="text" required placeholder="ID of post to be deleted"><br>
+          <input id= "emotionUpdate" name="emotion[emotionName]" required type="text" placeholder="Happy, Sad, Angry, Scared, Surprised, Disgusted" size="50">
+          <br>
+          <label for="description">Please describe what lead to this emotion:</label><br>
+          <textarea id="descriptionUpdate" name="emotion[description]" rows="4" cols="50"></textarea><br>
+          <button class="btn btn-outline-info" type="submit">Submit</button>
+        </form>
       </section>
 
 
