@@ -38,12 +38,43 @@
       <section id="after-sign-in" class="hide">
         <button id="sign-out" class="btn btn-outline-info">Sign Out</button>
 
-        <h3>Change Password</h3>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#exampleModal">
+          Change Password
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <form id="change-password">
+              <div class="modal-body">
+                <p id="password-change-message"></p>
+                  <input name="passwords[old]" required type="password" placeholder="Old password"/>
+                  <input name="passwords[new]" required type="password" placeholder="New password"/>
+                  <!-- <button class="btn btn-outline-info" type="submit">Submit</button> -->
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-outline-info">Save changes</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- <h3>Change Password</h3>
         <form id="change-password">
           <input name="passwords[old]" required type="password" placeholder="Old password"/>
           <input name="passwords[new]" required type="password" placeholder="New password"/>
           <button class="btn btn-outline-info" type="submit">Submit</button>
-        </form>
+        </form> -->
 
         <h3>Create Emotion</h3>
         <h5>Please select an emotion</h5>
@@ -85,7 +116,7 @@
 
         <h3>Update a post</h3>
         <form id="update-emotion">
-          <input name="id" type="text" required placeholder="ID of post to be deleted"><br>
+          <input name="id" type="text" required placeholder="ID of post to be deleted" size="50"><br>
           <input id= "emotionUpdate" name="emotion[emotionName]" required type="text" placeholder="Happy, Sad, Angry, Scared, Surprised, Disgusted" size="50">
           <br>
           <label for="description">Please describe what lead to this emotion:</label><br>

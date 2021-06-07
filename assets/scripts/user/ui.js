@@ -38,13 +38,13 @@ const signOutFailure = function () {
 }
 
 const changePasswordSuccess = function () {
-  $('#messaging').text('Changed password successfully')
+  $('#password-change-message').text('Password changed successfully!')
   console.log('changePasswordSuccess ran and nothing to return')
   $('form').trigger('reset')
 }
 
 const changePasswordFailure = function (error) {
-  $('#messaging').text('Error on change password')
+  $('#password-change-message').text('Error changing password')
   console.error('changePasswordFailure ran. Error is :', error)
 }
 
