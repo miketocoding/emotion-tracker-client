@@ -24,13 +24,15 @@ const signInFailure = function () {
 
 const signOutSuccess = function () {
   store.user = null
-  $('#messaging').text('Signed out successfully. Come play again!')
+  $('#messaging').text('Signed out successfully. Keep on feeling!')
   // Display the "before sign in" elements
   $('#before-sign-in').show()
   // Hide the "after sign in" elements
   $('#after-sign-in').hide()
   // Clear all the forms!
   $('form').trigger('reset')
+  // Clear all show
+  $('#emotions-list').text('')
 }
 
 const signOutFailure = function () {

@@ -20,6 +20,11 @@ const onIndexEmotions = function (event) {
     .catch(ui.indexEmotionsFailure)
 }
 
+const onClearIndexEmotions = function () {
+  $('#emotions-list').text('')
+    .then($('#messaging').text('Clear Posts Successful!'))
+}
+
 const onShowEmotion = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -53,8 +58,7 @@ const onUpdateEmotion = function (event) {
 const onDynamicDestroyEmotion = function (event) {
   event.preventDefault()
   console.log('in onDynamicDestroyEmotion')
-  const clickedButton = event.target
-  const emotionId = $(clickedButton).data('id')
+  const emotionId = $(event.target).data('id')
   console.log(emotionId)
   api.deleteEmotion(emotionId)
     .then(ui.deleteEmotionSuccess)
@@ -62,11 +66,25 @@ const onDynamicDestroyEmotion = function (event) {
     .catch(ui.deleteEmotionFailure)
 }
 
+const onDynamicUpdateEmotion = function (event) {
+  event.preventDefault()
+  console.log('in onDynamicUpdateEmotion')
+  const emotionId = $(event.target).data('id')
+  console.log(emotionId)
+  const data = getFormFields(event.target)
+  api.updateEmotion(emotionId, data)
+    .then(ui.updateEmotionSuccess)
+    .then(() => onIndexEmotions(event))
+    .catch(ui.updateEmotionFailure)
+}
+
 module.exports = {
   onCreateEmotion,
   onIndexEmotions,
+  onClearIndexEmotions,
   onShowEmotion,
   onDeleteEmotion,
   onUpdateEmotion,
-  onDynamicDestroyEmotion
+  onDynamicDestroyEmotion,
+  onDynamicUpdateEmotion
 }

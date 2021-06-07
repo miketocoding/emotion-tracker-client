@@ -27,10 +27,18 @@ const indexEmotionsSuccess = function (res) {
   let emotionHtml = ''
   res.forEach(emotion => {
     emotionHtml += `
-    <div>
+    <div class="border rounded">
       <h3>${emotion.emotionName}</h3>
       <p>Description: ${emotion.description}</p>
-      <p>ID: ${emotion._id}
+      <p>ID: ${emotion._id}</p>
+      <form class="dynamic-update-emotion" data-id=${emotion._id}>
+        <label for="update-emotion-emotionName">Emotion:</label>
+        <input class='dynamic-emotion-emotionName' type='text' name='emotion[emotionName]' placeholder="Update Emotion">
+        <label for="update-emotion-description">Description:</label>
+        <input clas='update-emotion-description' type='text' name='emotion[description]' placeholder="Update Description">
+        <button class="dynamic-update-emotion">Update Emotion</button>
+      </form>
+
       <button class="dynamic-destroy-emotion" data-id=${emotion._id}>Delete Emotion</button>
     </div>
   `

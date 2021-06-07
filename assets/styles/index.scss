@@ -1,5 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 
-// body {
-//   background-image: url('./../../../public/calm-background.jpeg')
-// }
+body {
+  background-image: url('./../../../public/summer-pattern.jpeg');
+  font-family: 'Nunito', sans-serif;
+  margin-top: 25px;
+}
+
+.border {
+  margin: 10px 0px;
+  padding: 10px 15px;
+}
