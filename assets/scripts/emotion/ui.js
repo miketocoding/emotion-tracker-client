@@ -16,25 +16,14 @@ const createEmotionFailure = function () {
 
 const indexEmotionsSuccess = function (res) {
   $('.after-sign-in-messaging').text('Emotion index success!')
-  // $('#emotions-list').html(
-  //   res.emotions.map(emotion => `<div>
-  //     <h3>${emotion.emotionName}</h3>
-  //     <p>Directed By: ${emotion.description}</p>
-  //   </div>`)
-  // )
-  // console.log('success, emotions indexed')
-  //
-  let emotionHtml = ''
-  res.forEach(emotion => {
-    emotionHtml += `
-    <div class="border rounded">
+  $('#emotions-list').html(
+    res.map(emotion => `<div class="border border-info rounded">
       <h3>${emotion.emotionName}</h3>
-      <p>Description: ${emotion.description}</p>
-      <p>ID: ${emotion._id}</p>
-    </div>
-  `
-  })
-  $('#emotions-list').html(emotionHtml)
+      <p>Directed By: ${emotion.description}</p>
+      <p>Emotion ID: ${emotion._id}<p>
+    </div>`)
+  )
+  console.log('success, emotions indexed')
 }
 
 const indexEmotionsFailure = function () {
@@ -47,16 +36,11 @@ const indexMyEmotionsSuccess = function (res) {
   console.log('This is the value of res', res)
   console.log('This is the emotion owner ID', res.owner)
   $('.after-sign-in-messaging').text('Emotion index success!')
-  // const myEmotions = res.map(emotion => {
-  //   if (emotion.owner === store.user._id) {
-  //     return emotion
-  //   }
-  // })
   let emotionHtml = ''
   for (let i = 0; i < res.length; i++) {
     if (store.user._id === res[i].owner) {
       emotionHtml += `
-      <div class="border rounded">
+      <div class="border border-info rounded">
         <h3>${res[i].emotionName}</h3>
         <p>Description: ${res[i].description}</p>
         <p>ID: ${res[i]._id}</p>

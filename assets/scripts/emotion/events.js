@@ -69,7 +69,6 @@ const onDynamicDestroyEmotion = function (event) {
   console.log(emotionId)
   api.deleteEmotion(emotionId)
     .then(ui.deleteEmotionSuccess)
-    // .then(() => onIndexEmotions(event))
     .then(() => onIndexMyEmotions(event))
     .catch(ui.deleteEmotionFailure)
 }
@@ -82,7 +81,6 @@ const onDynamicUpdateEmotion = function (event) {
   const data = getFormFields(event.target)
   api.updateEmotion(emotionId, data)
     .then(ui.updateEmotionSuccess)
-    // .then(() => onIndexEmotions(event))
     .then(() => onIndexMyEmotions(event))
     .catch(ui.updateEmotionFailure)
 }
