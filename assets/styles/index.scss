@@ -16,6 +16,11 @@ body {
   padding: 10px 15px;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
 .box {
   display: flex;
   align-items: flex-start;
