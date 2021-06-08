@@ -22,6 +22,6 @@ $(() => {
   $('#show-emotion').on('submit', emotionEvents.onShowEmotion)
   $('#delete-emotion').on('submit', emotionEvents.onDeleteEmotion)
   $('#update-emotion').on('submit', emotionEvents.onUpdateEmotion)
-  $('#emotions-list').on('click', '.dynamic-destroy-emotion', emotionEvents.onDynamicDestroyEmotion)
-  $('#emotions-list').on('submit', '.dynamic-update-emotion', emotionEvents.onDynamicUpdateEmotion)
+  $('#my-emotions-list').on('click', '.dynamic-destroy-emotion', emotionEvents.onDynamicDestroyEmotion)
+  $('#my-emotions-list').on('submit', '.dynamic-update-emotion', emotionEvents.onDynamicUpdateEmotion)
 })

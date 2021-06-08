@@ -31,16 +31,6 @@ const indexEmotionsSuccess = function (res) {
       <h3>${emotion.emotionName}</h3>
       <p>Description: ${emotion.description}</p>
       <p>ID: ${emotion._id}</p>
-
-      <form class="dynamic-update-emotion" data-id=${emotion._id}>
-        <label for="update-emotion-emotionName">Emotion:</label>
-        <input class='dynamic-emotion-emotionName' type='text' name='emotion[emotionName]' placeholder="Update Emotion"><br>
-        <label for="update-emotion-description">Description:</label>
-        <input clas='update-emotion-description' type='text' name='emotion[description]' placeholder="Update Description"><br>
-        <button class="dynamic-update-emotion">Update Emotion</button>
-      </form>
-
-      <button class="dynamic-destroy-emotion" data-id=${emotion._id}>Delete Emotion</button>
     </div>
   `
   })
@@ -71,7 +61,7 @@ const indexMyEmotionsSuccess = function (res) {
         <p>Description: ${res[i].description}</p>
         <p>ID: ${res[i]._id}</p>
 
-        <form class="dynamic-update-emotion" data-id=${res._id}>
+        <form class="dynamic-update-emotion" data-id=${res[i]._id}>
           <label for="update-emotion-emotionName">Emotion:</label>
           <input class='dynamic-emotion-emotionName' type='text' name='emotion[emotionName]' placeholder="Update Emotion"><br>
           <label for="update-emotion-description">Description:</label>
@@ -79,7 +69,7 @@ const indexMyEmotionsSuccess = function (res) {
           <button class="dynamic-update-emotion">Update Emotion</button>
         </form>
 
-        <button class="dynamic-destroy-emotion" data-id=${res._id}>Delete Emotion</button>
+        <button class="dynamic-destroy-emotion" data-id=${res[i]._id}>Delete Emotion</button>
       </div>
     `
     }
