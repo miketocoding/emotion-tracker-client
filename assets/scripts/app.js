@@ -17,7 +17,7 @@ $(() => {
   $('#after-sign-in').hide()
   $('#create-emotion').on('submit', emotionEvents.onCreateEmotion)
   $('#index-emotion').on('click', emotionEvents.onIndexEmotions)
-  // $('#index-my-emotion').on('click', emotionEvents.onIndexMyEmotions)
+  $('#index-my-emotion').on('click', emotionEvents.onIndexMyEmotions)
   $('.clear-index-emotion').on('click', emotionEvents.onClearIndexEmotions)
   $('#show-emotion').on('submit', emotionEvents.onShowEmotion)
   $('#delete-emotion').on('submit', emotionEvents.onDeleteEmotion)

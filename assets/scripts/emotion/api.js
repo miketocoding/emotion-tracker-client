@@ -26,6 +26,17 @@ const indexEmotions = function (data) {
   })
 }
 
+const indexMyEmotions = function () {
+  console.log('trying to index emotions...')
+  return $.ajax({
+    url: config.apiUrl + '/emotions',
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 const showEmotion = function (emotionId) {
   console.log('trying to show emotion...')
   return $.ajax({
@@ -63,6 +74,7 @@ const updateEmotion = function (emotionId, data) {
 module.exports = {
   createEmotion,
   indexEmotions,
+  indexMyEmotions,
   showEmotion,
   deleteEmotion,
   updateEmotion

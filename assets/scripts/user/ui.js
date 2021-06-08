@@ -33,6 +33,7 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
   // Clear all show
   $('#emotions-list').text('')
+  $('#my-emotions-list').text('')
 }
 
 const signOutFailure = function () {

@@ -20,9 +20,16 @@ const onIndexEmotions = function (event) {
     .catch(ui.indexEmotionsFailure)
 }
 
+const onIndexMyEmotions = function (event) {
+  api.indexMyEmotions()
+    .then(ui.indexMyEmotionsSuccess)
+    .catch(ui.indexMyEmotionsFailure)
+}
+
 const onClearIndexEmotions = function () {
   $('#emotions-list').text('')
-    .then($('.after-sign-in-messaging').text('Clear Posts Successful!'))
+  $('#my-emotions-list').text('')
+  $('.after-sign-in-messaging').text('Clear Posts Successful!')
 }
 
 const onShowEmotion = function (event) {
@@ -81,6 +88,7 @@ const onDynamicUpdateEmotion = function (event) {
 module.exports = {
   onCreateEmotion,
   onIndexEmotions,
+  onIndexMyEmotions,
   onClearIndexEmotions,
   onShowEmotion,
   onDeleteEmotion,
