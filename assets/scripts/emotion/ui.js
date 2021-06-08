@@ -20,7 +20,6 @@ const indexEmotionsSuccess = function (res) {
     res.map(emotion => `<div class="border border-info rounded">
       <h3>${emotion.emotionName}</h3>
       <p>Description: ${emotion.description}</p>
-      <p>Emotion ID: ${emotion._id}<p>
     </div>`)
   )
   console.log('success, emotions indexed')
