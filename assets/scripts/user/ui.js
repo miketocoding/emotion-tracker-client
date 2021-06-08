@@ -34,6 +34,7 @@ const signOutSuccess = function () {
   // Clear all show
   $('#emotions-list').text('')
   $('#my-emotions-list').text('')
+  $('.after-sign-in-messaging').text('')
 }
 
 const signOutFailure = function () {

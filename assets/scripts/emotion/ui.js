@@ -56,6 +56,7 @@ const indexMyEmotionsSuccess = function (res) {
   console.log('This is the user ID', store.user._id)
   console.log('This is the value of res', res)
   console.log('This is the emotion owner ID', res.owner)
+  $('.after-sign-in-messaging').text('Emotion index success!')
   // const myEmotions = res.map(emotion => {
   //   if (emotion.owner === store.user._id) {
   //     return emotion
