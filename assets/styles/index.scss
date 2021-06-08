@@ -18,6 +18,10 @@ body {
 
 .box {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-around;
+  // background-color: rgba(23, 162, 185, 1);
+  border-radius: 15px;
+  margin: 5px;
+  padding: 15px;
 }
