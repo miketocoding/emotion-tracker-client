@@ -24,8 +24,9 @@ $(() => {
   $('#update-emotion').on('submit', emotionEvents.onUpdateEmotion)
   $('#my-emotions-list').on('click', '.dynamic-destroy-emotion', emotionEvents.onDynamicDestroyEmotion)
   $('#my-emotions-list').on('submit', '.dynamic-update-emotion', emotionEvents.onDynamicUpdateEmotion)
+  // Limit checkbox to only one
   $('input:checkbox').click(function () {
-    const bol = $('input:checkbox:checked').length >= 1
-    $('input:checkbox').not(':checked').attr('disabled', bol)
+    const onlyOne = $('input:checkbox:checked').length >= 1
+    $('input:checkbox').not(':checked').attr('disabled', onlyOne)
   })
 })

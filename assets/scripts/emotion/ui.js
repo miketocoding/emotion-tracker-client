@@ -3,14 +3,12 @@
 const store = require('./../store')
 
 const createEmotionSuccess = function (res) {
-  console.log(`this is the response data, ${JSON.stringify(res)}`)
   store.emotion = res.emotion
   $('.after-sign-in-messaging').text('Thank you for sharing your feelings')
   $('#create-emotion').trigger('reset')
 }
 
 const createEmotionFailure = function () {
-  console.log('failed to create emotion')
   $('.after-sign-in-messaging').text('Something went wrong, can you try again?')
 }
 
@@ -22,18 +20,13 @@ const indexEmotionsSuccess = function (res) {
       <p>Description: ${emotion.description}</p>
     </div>`)
   )
-  console.log('success, emotions indexed')
 }
 
 const indexEmotionsFailure = function () {
-  console.log('failed to index my emotions')
   $('#after-sign-in-messaging').text('My emotions index failed')
 }
 
 const indexMyEmotionsSuccess = function (res) {
-  console.log('This is the user ID', store.user._id)
-  console.log('This is the value of res', res)
-  console.log('This is the emotion owner ID', res.owner)
   $('.after-sign-in-messaging').text('Emotion index success!')
   let emotionHtml = ''
   for (let i = 0; i < res.length; i++) {
@@ -69,7 +62,6 @@ const indexMyEmotionsSuccess = function (res) {
 }
 
 const indexMyEmotionsFailure = function () {
-  console.log('failed to index my emotions')
   $('#after-sign-in-messaging').text('My emotions index failed')
 }
 
@@ -100,13 +92,11 @@ const deleteEmotionFailure = function () {
 }
 
 const updateEmotionSuccess = function (res) {
-  console.log('update emotion success')
   $('#update-emotion').trigger('reset')
   $('.after-sign-in-messaging').text('Emotion updated')
 }
 
 const updateEmotionFailure = function () {
-  console.log('failed to update emotion')
   $('.after-sign-in-messaging').text('Emotion update failure')
 }
 

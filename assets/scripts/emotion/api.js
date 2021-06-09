@@ -3,7 +3,6 @@ const config = require('./../config.js')
 const store = require('./../store.js')
 
 const createEmotion = function (data) {
-  console.log('createEmotion data is: ', data)
   return $.ajax({
     method: 'POST',
     data: data,
@@ -16,7 +15,6 @@ const createEmotion = function (data) {
 }
 
 const indexEmotions = function (data) {
-  console.log('trying to index emotions...')
   return $.ajax({
     url: config.apiUrl + '/emotions',
     method: 'GET',
@@ -27,7 +25,6 @@ const indexEmotions = function (data) {
 }
 
 const indexMyEmotions = function () {
-  console.log('trying to index emotions...')
   return $.ajax({
     url: config.apiUrl + '/emotions',
     method: 'GET',
@@ -38,7 +35,6 @@ const indexMyEmotions = function () {
 }
 
 const showEmotion = function (emotionId) {
-  console.log('trying to show emotion...')
   return $.ajax({
     url: config.apiUrl + '/emotions/' + emotionId,
     method: 'GET',
@@ -49,7 +45,6 @@ const showEmotion = function (emotionId) {
 }
 
 const deleteEmotion = function (emotionId) {
-  console.log('trying to delete emotion...')
   return $.ajax({
     url: config.apiUrl + '/emotions/' + emotionId,
     method: 'DELETE',
@@ -60,7 +55,6 @@ const deleteEmotion = function (emotionId) {
 }
 
 const updateEmotion = function (emotionId, data) {
-  console.log('trying to update emotion...')
   return $.ajax({
     url: config.apiUrl + '/emotions/' + emotionId,
     method: 'PATCH',
