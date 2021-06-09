@@ -6,6 +6,7 @@ const createEmotionSuccess = function (res) {
   store.emotion = res.emotion
   $('.after-sign-in-messaging').text('Thank you for sharing your feelings')
   $('#create-emotion').trigger('reset')
+  $('input:checkbox').attr('disabled', false).prop('checked', false)
 }
 
 const createEmotionFailure = function () {
