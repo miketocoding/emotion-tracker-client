@@ -9,11 +9,30 @@ body {
 
 .title-text {
   text-shadow: -1px 0 #F8FFA8, 0 1px #F8FFA8, 1px 0 #F8FFA8, 0 -1px #F8FFA8;
+  margin-top: 10px;
 }
 
 .border {
   margin: 10px 0px;
   padding: 10px 15px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.margin-zero {
+  margin-bottom: 0;
+}
+
+.sign-in-up {
+  // display: flex;
+  // text-align: center;
+  max-width: 330px;
+  // display: flex;
+  // justify-content: center;
+  margin: 0 auto;
 }
 
 .box {

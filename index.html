@@ -28,12 +28,12 @@
 
         <div class="container">
         <div class='title-text'>
-          <h1>Emotion Tracker</h1>
+          <!-- <h1>Emotion Tracker</h1> -->
           <h3>It's healthy to feel</h3>
           <p id="messaging"></p>
         </div>
-        <div class="row h-100 board">
-      <div class="col-md-5 box">
+
+        <div class="sign-in-up">
         <section>
           <h5 class="title-text">Sign In</h5>
           <!-- <form id="sign-in">
@@ -43,23 +43,20 @@
           </form> -->
 
           <form id="sign-in">
-            <div class="form-group">
-              <label for="signInInputEmail1">Email address</label>
+            <div class="form-group margin-zero">
+              <label for="signInInputEmail1" class="sr-only">Email address</label>
               <input name="credentials[email]" required type="email" class="form-control" id="signInInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="form-group">
-              <label for="signInInputPassword1">Password</label>
+              <label for="signInInputPassword1" class="sr-only">Password</label>
               <input name="credentials[password]" required type="password" class="form-control" id="signInInputPassword1" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-info btn-block">Sign In</button>
           </form>
 
         </section>
-      </div>
-
-      <div class="col-md-5 box">
         <section>
-          <h5 class="title-text">Sign Up</h5>
+          <h5 class="title-text"></h5>
           <!-- <form id="sign-up">
             <input name="credentials[email]" required type="email" placeholder="Email Address"/>
             <input name="credentials[password]" required type="password" placeholder="Password"/>
@@ -68,7 +65,7 @@
           </form> -->
 
           <p>
-            <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn btn-info btn-block" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
               Sign Up
             </button>
           </p>
@@ -76,15 +73,15 @@
             <div class="card card-body">
               <form id="sign-up">
                 <div class="form-group">
-                  <label for="signUpInputEmail1">Email address</label>
+                  <label for="signUpInputEmail1" class="sr-only">Email address</label>
                   <input name="credentials[email]" required type="email" class="form-control" id="signUpInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email Address">
                 </div>
                 <div class="form-group">
-                  <label for="signUpInputPassword1">Password</label>
+                  <label for="signUpInputPassword1" class="sr-only">Password</label>
                   <input name="credentials[password]" required type="password" class="form-control" id="signUpInputPassword1" placeholder="Enter Password">
                 </div>
                 <div class="form-group">
-                  <label for="signUpInputPassword2">Password Confirmation</label>
+                  <label for="signUpInputPassword2" class="sr-only">Password Confirmation</label>
                   <input name="credentials[password_confirmation]" required type="password" class="form-control" id="signUpInputPassword2" placeholder="Enter Password Again">
                 </div>
                 <button type="submit" class="btn btn-info">Submit</button>
@@ -111,8 +108,6 @@
         </section>
       </div>
 
-
-      </div>
       </div>
       </section>
 
@@ -132,7 +127,6 @@
         <div class="container">
 
           <div class="title-text">
-        <h1>Emotion Tracker</h1>
         <h3>It's healthy to feel</h3>
         <p class="after-sign-in-messaging"></p>
         </div>
@@ -158,11 +152,11 @@
                   <button class="btn btn-outline-info" type="submit">Submit</button>
                 </form> -->
 
-                <form id="create-emotion">
+                <!-- <form id="create-emotion">
                   <label for="emotion-select">Choose an emotion:</label>
 
                   <select name="emotion[emotionName]" id="emotion-select">
-                      <option value="">--Please choose an option--</option>
+                      <option value="">Please choose an option</option>
                       <option value="Happiness">Happiness</option>
                       <option value="Sadness">Sadness</option>
                       <option value="Fear">Fear</option>
@@ -175,25 +169,45 @@
                   <textarea id="description" name="emotion[description]" rows="4" cols="50"></textarea><br>
                   <button class="btn btn-outline-info" type="submit">Submit</button>
 
+                </form> -->
+
+                <form id="create-emotion">
+                  <p>Choose your emotion:</p>
+                  <div class="container">
+                    <div class="row h-100">
+                  <div class="col-4 ">
+                    <input type="checkbox" value="Happiness" id="happiness" name="emotion[emotionName]">
+                    <label for="scales"><img class="img-fluid" alt='Happiness' src="public/happiness-emotion.png"></label>
+                  </div>
+                  <div class="col-4 ">
+                    <input type="checkbox" value="Sadness" id="sadness" name="emotion[emotionName]">
+                    <label for="horns"><img class="img-fluid" alt='Sadness' src="public/sadness-emotion.png"></label>
+                  </div>
+                  <div class="col-4 ">
+                    <input type="checkbox" value="Fear" id="fear" name="emotion[emotionName]">
+                    <label for="horns"><img class="img-fluid" alt='Fear' src="public/fear-emotion.png"></label>
+                  </div>
+                  <div class="col-4 ">
+                    <input type="checkbox" value="Disgust" id="disgust" name="emotion[emotionName]">
+                    <label for="horns"><img class="img-fluid" alt='Disgust' src="public/disgust-emotion.png"></label>
+                  </div>
+                  <div class="col-4 ">
+                    <input type="checkbox" value="Anger" id="anger" name="emotion[emotionName]">
+                    <label for="horns"><img class="img-fluid" alt='Anger' src="public/anger-emotion.png"></label>
+                  </div>
+                  <div class="col-4 ">
+                    <input type="checkbox" value="Surprise" id="surprise" name="emotion[emotionName]">
+                    <label for="horns"><img class="img-fluid" alt='Surprise' src="public/surprise-emotion.png"></label>
+                  </div>
+                </div>
+                </div>
+
+                  <label for="description">Please describe what lead to this emotion:</label><br>
+                  <textarea id="description" name="emotion[description]" rows="4" cols="40"></textarea><br>
+                  <button class="btn btn-outline-info" type="submit">Submit</button>
                 </form>
 
-              </div>
-            </div>
-          </div>
 
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Show All Emotion Posts
-                </button>
-              </h5>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body">
-                <button id="index-emotion" class="btn btn-outline-info">Show All Posts</button>
-                <button class="btn btn-outline-info clear-index-emotion">Clear Posts</button>
-                <div id="emotions-list"></div>
               </div>
             </div>
           </div>
@@ -209,8 +223,25 @@
             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
               <div class="card-body">
                 <button id="index-my-emotion" class="btn btn-outline-info">Show All My Posts</button>
-                <button class="btn btn-outline-info clear-index-emotion">Clear Posts</button>
+                <button class="btn btn-outline-info clear-index-emotion">Hide Posts</button>
                 <div id="my-emotions-list"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Show All Emotion Posts
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+              <div class="card-body">
+                <button id="index-emotion" class="btn btn-outline-info">Show All Posts</button>
+                <button class="btn btn-outline-info clear-index-emotion">Hide Posts</button>
+                <div id="emotions-list"></div>
               </div>
             </div>
           </div>
@@ -227,7 +258,7 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
                 <form id="delete-emotion">
-                  <input name="id" type="text" required placeholder="ID of post to be deleted" size="50"><br>
+                  <input name="id" type="text" required placeholder="ID of post to be deleted" size="40"><br>
                   <button class="btn btn-outline-info" type="submit">Delete this post</button>
                 </form>
               </div>
@@ -246,7 +277,7 @@
               <div class="card-body">
                 <form id="update-emotion">
                   <h5>Emotion ID: </h5>
-                  <input name="id" type="text" required placeholder="ID of post to be updated" size="50"><br><br>
+                  <input name="id" type="text" required placeholder="ID of post to be updated" size="40"><br><br>
                   <h5>How are you feeling?</h5>
 
                   <!-- <input id= "emotionUpdate" name="emotion[emotionName]" required type="text" placeholder="Happy, Sad, Angry, Scared, Surprised, Disgusted" size="50"> -->
@@ -266,7 +297,7 @@
 
                   <br>
                   <label for="description">Please describe what lead to this emotion:</label><br>
-                  <textarea id="descriptionUpdate" name="emotion[description]" rows="4" cols="50"></textarea><br>
+                  <textarea id="descriptionUpdate" name="emotion[description]" rows="4" cols="40"></textarea><br>
                   <button class="btn btn-outline-info" type="submit">Submit</button>
                 </form>
               </div>

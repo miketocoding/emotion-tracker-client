@@ -45,9 +45,8 @@ const indexMyEmotionsSuccess = function (res) {
         <p>ID: ${res[i]._id}</p>
 
         <form class="dynamic-update-emotion" data-id=${res[i]._id}>
-        <label for="emotion-select">Choose an emotion:</label>
-
-        <select name="emotion[emotionName]" id="emotion-select">
+        <p>Please choose an emotion:<p>
+        <select name="emotion[emotionName]">
             <option value="">--Please choose an option--</option>
             <option value="Happiness">Happiness</option>
             <option value="Sadness">Sadness</option>
@@ -56,12 +55,12 @@ const indexMyEmotionsSuccess = function (res) {
             <option value="Anger">Anger</option>
             <option value="Surprise">Surprise</option>
         </select>
-          <label for="update-emotion-description">Description:</label>
-          <input clas='update-emotion-description' type='text' name='emotion[description]' placeholder="Update Description"><br>
-          <button class="dynamic-update-emotion">Update Emotion</button>
+          <label for="update-emotion-description" class="sr-only">Description:</label>
+          <input class='update-emotion-description' type='text' name='emotion[description]' placeholder="Update Description"><br>
+          <button class="dynamic-update-emotion btn-outline-info btn-sm btn">Update Emotion</button>
         </form>
 
-        <button class="dynamic-destroy-emotion" data-id=${res[i]._id}>Delete Emotion</button>
+        <button class="dynamic-destroy-emotion btn-outline-info btn-sm btn" data-id=${res[i]._id}>Delete Emotion</button>
       </div>
     `
     }
