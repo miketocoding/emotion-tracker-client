@@ -16,7 +16,7 @@
       <section id="before-sign-in">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-          <a class="navbar-brand" href="#">Emotion Tracker</a>
+          <a class="navbar-brand" href="#">Emotion Tracker: It's healthy to feel</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,8 +28,6 @@
 
         <div class="container">
         <div class='title-text'>
-          <!-- <h1>Emotion Tracker</h1> -->
-          <h3>It's healthy to feel</h3>
           <p id="messaging"></p>
         </div>
 
@@ -114,7 +112,7 @@
       <section id="after-sign-in" class="hide">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-                <a class="navbar-brand" href="#">Emotion Tracker</a>
+          <a class="navbar-brand" href="#">Emotion Tracker: It's healthy to feel</a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -127,7 +125,6 @@
         <div class="container">
 
           <div class="title-text">
-        <h3>It's healthy to feel</h3>
         <p class="after-sign-in-messaging"></p>
         </div>
 
@@ -172,7 +169,7 @@
                 </form> -->
 
                 <form id="create-emotion">
-                  <p>Choose your emotion:</p>
+                  <p>How are you feeling (choose one)?</p>
                   <div class="container">
                     <div class="row h-100">
                   <div class="col-4 ">
@@ -202,8 +199,8 @@
                 </div>
                 </div>
 
-                  <label for="description">Please describe what lead to this emotion:</label><br>
-                  <textarea id="description" name="emotion[description]" rows="4" cols="40"></textarea><br>
+                  <label for="description">Please describe what lead to you feeling this way:</label><br>
+                  <textarea id="description" name="emotion[description]" class="form-control"></textarea><br>
                   <button class="btn btn-outline-info" type="submit">Submit</button>
                 </form>
 
@@ -258,7 +255,7 @@
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
                 <form id="delete-emotion">
-                  <input name="id" type="text" required placeholder="ID of post to be deleted" size="40"><br>
+                  <input name="id" type="text" required placeholder="ID of post to be deleted" class="form-control"><br>
                   <button class="btn btn-outline-info" type="submit">Delete this post</button>
                 </form>
               </div>
@@ -277,15 +274,15 @@
               <div class="card-body">
                 <form id="update-emotion">
                   <h5>Emotion ID: </h5>
-                  <input name="id" type="text" required placeholder="ID of post to be updated" size="40"><br><br>
+                  <input name="id" type="text" required placeholder="ID of post to be updated" class="form-control"><br>
                   <h5>How are you feeling?</h5>
 
                   <!-- <input id= "emotionUpdate" name="emotion[emotionName]" required type="text" placeholder="Happy, Sad, Angry, Scared, Surprised, Disgusted" size="50"> -->
 
-                  <label for="emotion-update-select">Choose an emotion:</label>
+                  <label for="emotion-update-select" class="sr-only">Choose an emotion:</label>
 
                   <select name="emotion[emotionName]" id="emotion-update-select">
-                      <option value="">--Please choose an option--</option>
+                      <option value="">--Please choose an emotion--</option>
                       <option value="Happiness">Happiness</option>
                       <option value="Sadness">Sadness</option>
                       <option value="Fear">Fear</option>
@@ -296,8 +293,8 @@
 
 
                   <br>
-                  <label for="description">Please describe what lead to this emotion:</label><br>
-                  <textarea id="descriptionUpdate" name="emotion[description]" rows="4" cols="40"></textarea><br>
+                  <label for="descriptionUpdate">Please describe what lead to you feeling this way:</label><br>
+                  <textarea id="descriptionUpdate" name="emotion[description]" class="form-control"></textarea><br>
                   <button class="btn btn-outline-info" type="submit">Submit</button>
                 </form>
               </div>
