@@ -35,6 +35,7 @@ const signOutSuccess = function () {
   $('#emotions-list').text('')
   $('#my-emotions-list').text('')
   $('.after-sign-in-messaging').text('')
+  $('input:checkbox').attr('disabled', false).prop('checked', false)
 }
 
 const signOutFailure = function () {
