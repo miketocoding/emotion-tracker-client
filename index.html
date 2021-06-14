@@ -225,7 +225,7 @@
 
                   <label for="emotion-update-select" class="sr-only">Choose an emotion:</label>
 
-                  <select name="emotion[emotionName]" id="emotion-update-select">
+                  <select name="emotion[emotionName]" id="emotion-update-select" required>
                       <option value="">--Please choose an emotion--</option>
                       <option value="Happiness">Happiness</option>
                       <option value="Sadness">Sadness</option>
@@ -238,7 +238,7 @@
 
                   <br>
                   <label for="descriptionUpdate">Please describe what lead to you feeling this way:</label><br>
-                  <textarea id="descriptionUpdate" name="emotion[description]" class="form-control"></textarea><br>
+                  <textarea id="descriptionUpdate" name="emotion[description]" class="form-control" required></textarea><br>
                   <button class="btn btn-outline-info" type="submit">Submit</button>
                 </form>
               </div>
