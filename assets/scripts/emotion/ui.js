@@ -36,11 +36,10 @@ const indexMyEmotionsSuccess = function (res) {
       <div class="border border-info rounded">
         <h3>${res[i].emotionName}</h3>
         <p>Description: ${res[i].description}</p>
-        <p>ID: ${res[i]._id}</p>
 
         <form class="dynamic-update-emotion" data-id=${res[i]._id}>
-        <p>Please choose an emotion:<p>
-        <select name="emotion[emotionName]" required>
+        <p>Update my emotion post:<p>
+        <select name="emotion[emotionName]" class="form-control" required>
             <option value="">--Please choose an emotion--</option>
             <option value="Happiness">Happiness</option>
             <option value="Sadness">Sadness</option>
